@@ -1,0 +1,19 @@
+
+
+.message-wrapper{
+    width: 40%;
+    padding: 1vmax;
+    margin: 1vmax;
+    border-radius: 0.5vmax;
+    display: inline-block;
+    clear: both;
+}
+
+.right{
+    float: right;
+    background-color: aquamarine;
+}
+.left{
+    float: left;
+    background-color: antiquewhite;
+}

@@ -1,0 +1,55 @@
+@import "_variables.scss";
+
+@mixin flex-mixin(){
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    @content;
+}
+.chats-wrapper{
+    width: 100dvw;
+    height: 100dvh;
+    @include flex-mixin();
+    justify-content: center;
+    .chats-container{
+        @include flex-mixin(){
+            flex-direction: column
+        };
+        width: 100dvw;
+        height: 100dvh;
+        .chats-header{
+            width: 100dvw;
+            height: 10dvh;
+            padding: 0 2dvw;
+            background-color: cadetblue;
+            box-sizing: border-box;
+
+            .connected-user{
+                color: $btn-txt-color;
+            }
+        }
+
+        .chat-box{
+            width: 100dvw;
+            height: 80dvh;
+            box-sizing: border-box;
+        }
+
+        .input-box{
+            width: 100dvw;
+            height: 10dvh;
+            padding: 0 2dvw;
+            border-top: 1px solid cadetblue;
+            @include flex-mixin();
+
+            .message-input{
+                width: 90dvw;
+                padding: 10px;
+                border: transparent;
+                outline: transparent;
+                resize: none;
+            }
+        }
+    }
+
+}
